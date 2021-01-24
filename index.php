@@ -1,19 +1,5 @@
-<!-- Menambahkan elemen baru pada array -->
-<?php 
-$hari = array("Senin", "Selasa", "Rabu");
-$hari[] = "Kamis";
-$hari[] = "Jumat";
-var_dump($hari);
-?>
-
-
-<!-- menampilkan array ke user dengan pengulangan -->
-<!-- for / foreach -->
-<!-- Contoh 1 -->
-<!-- <?php 
-    $angka = [2,1,4,3,5,5,2,5,2,5];
-?>
-<html lang="en">
+<!-- Tambahan Array Basic -->
+<!-- <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,37 +10,53 @@ var_dump($hari);
     </style>
 </head>
 <body>
-    <?php for( $i = 0; $i < count($angka); $i++ ): ?>
-        <div class="kotak"><?php echo $angka[$i]; ?></div>
-    <?php endfor; ?>
-
-    <div class="clear"></div>
+    <?php $angka = [[2,1,4],[3,5,5],[5,2,5]]; ?>
 
     <?php foreach($angka as $a): ?>
-        <div class="kotak"><?php echo $a; ?></div>
+        <?php foreach($a as $b): ?>
+            <div class="kotak"><?php echo $b; ?></div>
+        <?php endforeach; ?>
+            <div class="clear"></div>
     <?php endforeach; ?>
 </body>
 </html> -->
 
 
-<!-- Contoh 2 -->
-<?php $mahasiswa = [
-["ikhdan", "042065278", "Sistem Informasi", "jikhdan@gmail.com"],
-["joban", "042065279", "Teknik Informasi", "joban@gmail.com"]];
-?>
+<!--Array Associative  -->
+<!-- Definisinya sama seperti array numerik, kecuali
+     Key-nya adalah string yang kita buat sendiri
+ -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP</title>
 </head>
 <body>
     <h1>Daftar Mahasiswa</h1>
-       <?php foreach( $mahasiswa as $mhs ): ?>
-    <ul>
-        <li><?= $mhs[0]; ?></li>
-        <li><?= $mhs[1]; ?></li>
-        <li><?= $mhs[2]; ?></li>
-        <li><?= $mhs[3]; ?></li>
-    </ul>
-       <?php endforeach; ?>
+    <?php 
+        $mahasiswa = [
+                        [  "nama"  =>   "Ikhdanul Widad Joban", 
+                            "nrp"   =>    "082065278",
+                            "email" =>  "jikhdan@gmail.com",
+                            "gambar" => "joban.png"],
+                        [   "nama"   =>   " Joban", 
+                            "nrp"   =>    "082065279",
+                            "email" =>  "joban@gmail.com",
+                            "gambar" => "joban1.png",
+                            "tugas" => [90,80,100]
+                        ]                    
+                    ];
+    ?>
+
+                    <?php foreach( $mahasiswa as $mhs ): ?>
+                    <img src="<?= $mhs["gambar"]; ?>" width="100" height="100" alt="">
+                        <ul>
+                            <li>Nama : <?= $mhs["nama"]; ?></li>
+                            <li>Nama : <?= $mhs["nrp"]; ?></li>
+                            <li>Nama : <?= $mhs["email"]; ?></li>
+                        </ul>
+                    <?php endforeach; ?>
 </body>
 </html>
