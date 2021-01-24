@@ -37,8 +37,9 @@ require "functions.php";
 <body>
     <h1>Ubah Data Mahasiswa</h1>
 
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?= $mhs["id"]; ?>">
+    <input type="hidden" name="gambarLama" value="<?= $mhs["gambar"]; ?>">
         <ul>
             <li>
                 <label for="nrp">NRP : </label>
@@ -55,10 +56,11 @@ require "functions.php";
             <li>
                 <label for="jurusan">Jurusan : </label>
                 <input type="text" name="jurusan" id="jurusan" value="<?= $mhs["jurusan"]; ?>">
-            </li>
+            </li><br>
             <li>
                 <label for="gambar">Gambar : </label>
-                <input type="text" name="gambar" id="gambar" value="<?= $mhs["gambar"]; ?>">
+                <img src="img/<?= $mhs['gambar']; ?>" width="50" height="50">
+                <input type="file" name="gambar" id="gambar">
             </li>
             <li>
                 <button type="submit" name="submit">Ubah Data</button>

@@ -1,8 +1,8 @@
 <?php 
 require "functions.php";
     // cek tombol submit sudah di klik / belum
-    if( isset($_POST["submit"]) ){          
-
+    if( isset($_POST["submit"]) ){ 
+        
         // cek apakah data berhasil ditambahkan atau tidak 
         if ( tambah($_POST) > 0){
             echo "
@@ -14,7 +14,7 @@ require "functions.php";
         }else{
             echo "
             <script>
-                alert('data gagal berhasil di tambahkan');
+                alert('data gagal di tambahkan');
                 document.location.href = 'index.php'
             </script>
         ";
@@ -32,7 +32,7 @@ require "functions.php";
 <body>
     <h1>Tambah Data Mahasiswa</h1>
 
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <ul>
             <li>
                 <label for="nrp">NRP : </label>
@@ -52,7 +52,7 @@ require "functions.php";
             </li>
             <li>
                 <label for="gambar">Gambar : </label>
-                <input type="text" name="gambar" id="gambar">
+                <input type="file" name="gambar" id="gambar">
             </li>
             <li>
                 <button type="submit" name="submit">Tambah Data</button>

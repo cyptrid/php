@@ -47,7 +47,7 @@
                         <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('yakin?');">Hapus</a>
                     </td>
                     <td>
-                        <img src="<?= $row["gambar"]; ?>" width="50" height="50" alt="">
+                        <img src="img/<?= $row["gambar"]; ?>" width="50" height="50" alt="">
                     </td>
                     <td><?= $row["nrp"]; ?></td>
                     <td><?= $row["nama"]; ?></td>
