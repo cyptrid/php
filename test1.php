@@ -1,1 +1,0 @@
-Selamat Datang <?= $_POST["nama"]; ?>
