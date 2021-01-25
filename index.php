@@ -39,8 +39,8 @@ session_start();
 
         <br><br>
             <form action="" method="post">
-                <input type="text" name="keyword" size="40" id="keyword" placeholder="masukkan keyword pencarian">
-                <button type="submit" name="cari" id="tombol-cari">Cari</button>
+                <input type="text" name="keyword" size="40"  placeholder="masukkan keyword pencarian">
+                <button type="submit" name="cari" >Cari</button>
         <br>
         <br>
         
@@ -65,7 +65,7 @@ session_start();
         <br>
         </form>
 
-        <div id="container">
+        <div class="container">
         <table border="1" cellpadding="10" cellspacing="0">
                 <tr>
                     <th>No.</th>
@@ -96,6 +96,6 @@ session_start();
         <?php endforeach; ?>    
         </table>
     </div>
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>    
 </body>
 </html>
