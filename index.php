@@ -39,8 +39,9 @@ session_start();
 
         <br><br>
             <form action="" method="post">
-                <input type="text" name="keyword" size="40"  placeholder="masukkan keyword pencarian">
-                <button type="submit" name="cari" >Cari</button>
+                <input type="text" name="keyword" size="40" id="keyword" placeholder="masukkan keyword pencarian">
+                <button type="submit" name="cari" id="tombol-cari">Cari</button>
+                <img src="img/loader1.gif" class="loader" style="width:30px; position:absolute; top:145px; z-index:-1; display:none; ">
         <br>
         <br>
         
@@ -65,7 +66,7 @@ session_start();
         <br>
         </form>
 
-        <div class="container">
+        <div id="container">
         <table border="1" cellpadding="10" cellspacing="0">
                 <tr>
                     <th>No.</th>
@@ -96,6 +97,7 @@ session_start();
         <?php endforeach; ?>    
         </table>
     </div>
-    <script src="script.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
